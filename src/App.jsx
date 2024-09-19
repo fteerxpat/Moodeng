@@ -6,6 +6,15 @@ export default function App() {
   const displayedImage = level < 100 ? `/001.jpg` : `/005.jpg`;
   const imageSize = level <= 100 ? level : 100;
   const resetLevel = () => {setLevel(0);};
+  
+  const imageStyle = {
+    width: '100px', 
+    height: '100px', 
+    cursor: 'pointer', 
+    border: '5px solid black',
+    borderRadius: '10px' 
+  };
+
   return (
     <>
       <h1>Level {level}</h1>
@@ -13,7 +22,7 @@ export default function App() {
         <img
           src={displayedImage}
           alt="หมูเด้ง"
-          style={{ width: `${imageSize * 3}px`, height: `${imageSize * 3}px` }}
+          style={{ width: `${imageSize * 3}px`, height: `${imageSize * 3}px`, border: '5px solid black', borderRadius: '10px' }} // กรอบรูปหลัก
         />
       </div>
 
@@ -23,7 +32,7 @@ export default function App() {
             src="./002.jpg"
             alt="แตงโม"
             onClick={() => setLevel((prevLevel) => prevLevel + 5)}
-            style={{ width: '100px', height: '100px', cursor: 'pointer' }}
+            style={imageStyle} // กรอบแตงโม
           />
         </div>
         <div style={{ textAlign: 'center', margin: '30px' }}>
@@ -31,7 +40,7 @@ export default function App() {
             src="./003.jpg"
             alt="ฟักทอง"
             onClick={() => setLevel((prevLevel) => prevLevel + 10)}
-            style={{ width: '100px', height: '100px', cursor: 'pointer' }}
+            style={imageStyle} // กรอบฟักทอง
           />
         </div>
         <div style={{ textAlign: 'center', margin: '30px' }}>
@@ -39,15 +48,15 @@ export default function App() {
             src="./004.jpg"
             alt="หญ้า"
             onClick={() => setLevel((prevLevel) => prevLevel + 20)}
-            style={{ width: '100px', height: '100px', cursor: 'pointer' }}
+            style={imageStyle}
           />
         </div>
         <div style={{ textAlign: 'center', margin: '30px' }}>
-        <img
+          <img
             src="./006.png"
             alt="ล้างข้อมูล"
             onClick={resetLevel}
-            style={{ width: '100px', height: '100px', cursor: 'pointer' }}
+            style={imageStyle}
           />
         </div>
       </div>

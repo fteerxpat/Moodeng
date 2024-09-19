@@ -44,8 +44,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./007.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  font-family: sans-serif;
+  background-image: url('/007.jpg'); /* Replace with the path to your background image */
+  background-size: cover; /* Ensure the background covers the whole page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
 }
